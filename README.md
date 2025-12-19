@@ -1,86 +1,38 @@
-# Cybersecurity-Learning-Lab-Portfolio
-Descripción
-Laboratorio de **Network Forensics** donde se analiza tráfico de red capturado en un archivo PCAP para investigar la aparición de un archivo sospechoso en un servidor web corporativo.
+Este repositorio documenta mi proceso de aprendizaje práctico en **ciberseguridad** a través de laboratorios en plataformas como **CyberDefenders** y **Hack The Box**.
 
-El objetivo es identificar cómo se introdujo el archivo, qué actividad maliciosa ocurrió y evaluar el alcance de una posible intrusión.
+Actualmente me encuentro reforzando fundamentos técnicos, desarrollando criterio analítico y explorando distintas áreas de la ciberseguridad antes de especializarme en una rama concreta.
 
-> Tipo de entorno: Análisis de tráfico HTTP (PCAP)
+El objetivo de este repositorio es mostrar **cómo pienso, cómo analizo y cómo aprendo**, más que demostrar un nivel avanzado.
 
 ---
 
-## 🎯 Objetivo
-Analizar el archivo PCAP proporcionado para:
-- Identificar actividad sospechosa contra un servidor web
-- Determinar el vector de acceso inicial
-- Detectar posibles fases de ejecución, comando y control o exfiltración
-- Comprender el flujo completo del ataque a nivel de red
+## 🎯 Objetivos del repositorio
+- Documentar laboratorios prácticos de ciberseguridad
+- Mejorar habilidades de análisis técnico y forense
+- Practicar una documentación clara y estructurada
+- Construir un historial de aprendizaje continuo
 
 ---
 
-## 🛠️ Herramientas utilizadas
-- **Wireshark**
+## 🧪 Plataformas utilizadas
+- **CyberDefenders** – Network Forensics, DFIR, análisis defensivo
+- **Hack The Box** – Fundamentos de seguridad y enumeración
+
+Todos los contenidos respetan las normas de cada plataforma:
+- Sin flags
+- Sin información sensible
+- Solo laboratorios permitidos
+- Metodología
+Para cada laboratorio sigo una metodología basada en:
+1. Comprensión del escenario
+2. Análisis inicial
+3. Investigación paso a paso
+4. Documentación del razonamiento
+5. Identificación de aprendizajes y mitigaciones
 
 ---
 
-## 🔍 Metodología
-
-### 1. Análisis inicial del tráfico
-Se cargó el archivo PCAP en Wireshark para obtener una visión general del tráfico capturado.
-
-Acciones iniciales:
-- Revisión de protocolos más frecuentes
-- Identificación de tráfico HTTP
-- Análisis de direcciones IP internas y externas
-
-Esto permitió centrar la investigación en comunicaciones web potencialmente maliciosas.
-
----
-
-### 2. Inspección de tráfico HTTP
-Se aplicaron filtros para aislar tráfico HTTP relevante, prestando especial atención a:
-- Solicitudes `POST`
-- Descargas de archivos
-- Respuestas del servidor con contenido anómalo
-
-Durante esta fase se identificaron peticiones sospechosas que indicaban posible **subida o descarga de archivos no autorizados**.
-
----
-
-### 3. Reconstrucción de la actividad
-A partir del análisis del tráfico:
-- Se siguió el flujo de las conversaciones HTTP
-- Se correlacionaron las peticiones con el momento en que apareció el archivo sospechoso
-- Se evaluó si existían indicios de comunicación posterior con el atacante
-
-Esto permitió reconstruir la secuencia de eventos y entender el comportamiento observado en la red.
-
----
-
-## ✅ Resultado
-El análisis confirmó que:
-- El servidor web recibió tráfico malicioso
-- El archivo sospechoso fue introducido a través de peticiones HTTP
-- Se observaron indicios de comportamiento compatible con acceso inicial y posible ejecución remota
-
-No se incluyen flags ni datos sensibles, siguiendo las normas de la plataforma.
-
----
-
-## 🧠 Aprendizajes clave
-- Cómo analizar tráfico HTTP en un PCAP usando Wireshark
-- Importancia de filtrar correctamente para reducir ruido
-- Cómo reconstruir una línea temporal de ataque a partir de tráfico de red
-- Identificación de comportamientos anómalos sin necesidad de acceso al host
-
----
-
-## 🛡️ Mitigaciones y buenas prácticas
-- Implementar validaciones estrictas en aplicaciones web para evitar subida de archivos maliciosos
-- Monitorizar tráfico HTTP en busca de patrones anómalos
-- Uso de WAF para detectar y bloquear solicitudes sospechosas
-- Registro y correlación de logs de red y servidor web
-
----
-
-## 🔖 Etiquetas
-`#network-forensics` `#pcap` `#wireshark` `#http` `#initial-access` `#execution`
+## 🚀 Estado actual
+- Nivel: Fundamentos / Inicial
+- Repositorio en crecimiento
+- Actualizado conforme completo nuevos laboratorios
